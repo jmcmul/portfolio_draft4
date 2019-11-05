@@ -1,0 +1,293 @@
+img{width: 300px; height: 300px;}
+
+html{scroll-behavior: smooth;}
+
+body{font-size: 18px;
+    font-family: "Arial";}
+
+h1{font-size: 50px; 
+line-height: 1;
+padding:50px;
+text-align: left;}
+
+h2{font-size: 32px;
+line-height: 1.5;
+padding: 20px;}
+
+p{color:#989898;
+padding: 20px;}
+
+footer p{ background-color: black;
+    color: white;
+    text-align: center;
+    }
+
+head {text-align: center;
+font-size: 35px;
+padding-bottom: 100px;
+grid-column: 1 / span 1;
+grid-row: 1/span 1;
+display: left;}
+
+nav ul{
+    list-style-type: none;}
+
+nav li{text-align: left;
+    margin-bottom: 20px;
+    min-width: 175px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-right: none;
+    margin-top: 20px;}                
+
+nav a{color: black;
+    font-weight: bold;
+    text-decoration: none;
+    }
+
+nav a:hover{text-decoration: underline;}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute; 
+    margin-top: -40px; 
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+
+  .skip a:focus{margin-top: 0px;}
+
+  *:focus{border: 2px solid black;}
+
+
+.nav{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    text-align: left;}
+
+
+
+.index_container{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-row-gap: 200px;
+    grid-template-rows: auto auto auto auto;
+    width: 100vw;
+}
+
+
+@keyframes slidein{
+    from{margin-left:100%;
+    width: 300%;}
+    to{margin-left: 0%;
+    width: 100%;}
+}
+
+.intro{grid-column: 1/-1;
+    grid-row: 2/-1;
+    text-align: center;
+    font-size: 30px;
+    animation-name: slidein;
+    animation-duration: 2s;
+  }
+
+@keyframes headingcolors{
+    0%{color: black;}
+    50%{color: navy;}
+    100%{color: black;}
+}
+
+h1{grid-column: 1/-1;
+grid-row: 1/-1;
+text-align: left;
+animation-name: headingcolors;
+animation-duration: 4s;}
+
+.images{grid-column: 1/-1;
+grid-row: 3/span 1;
+padding-top: 150px; 
+text-align: left;
+padding-left: 200px;} /*L-Shape for mobile and 3 across for desktop view */
+
+.index_footer{grid-column: 1/-1;
+    grid-row: 4/auto;}
+
+.about_container{
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-row-gap: 100px;
+    grid-template-rows: auto auto auto auto auto; 
+    width: 100vw; 
+  }
+
+.personal_text{grid-column: 1/ -1;
+grid-row: 2/span 1;
+border: solid black;
+margin: 50px;} 
+
+
+.education_text{grid-column: 1/ -1;
+grid-row: 3/ span 1;
+border: solid black;
+margin: 50px;}
+
+.goals_text{grid-column: 1/ -1;
+grid-row: 4/span 1;
+border: solid black;
+margin: 50px;}
+
+.about_footer{ grid-column: 1/-1;
+    grid-row: 5/auto;} 
+
+
+
+
+.work_container{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-row-gap: 100px;
+    grid-template-rows: auto auto auto auto auto auto;
+    width: 100vw;
+}
+
+.sales_intern{grid-column: 1/-1;
+grid-row: 2/span 1;
+border: solid black;
+margin: 50px;} 
+
+.user_experience{grid-column: 1/-1;
+grid-row: 3/span 1;
+border: solid black;
+margin: 50px;} 
+
+.upnext_music{grid-column: 1/-1;
+grid-row: 4/span 1;
+border: solid black;
+margin: 50px;}
+
+.oben{grid-column: 1 /-1;
+grid-row: 5/span 1;
+border: solid black;
+margin: 50px;}
+
+.work_footer{grid-column: 1/-1;
+    grid-row: 6/auto;}
+
+.contact_container{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-row-gap: 50px;
+    grid-template-rows: auto auto auto auto auto;
+    width: 100vw;}
+
+.welcome_text{grid-column: 1/-1;
+grid-row: 2/ span 1;
+margin: 20px;} 
+
+#form{grid-column: 1/-1;
+grid-row: 3/span 1;
+text-align: left;
+font-size: 40px;
+border: solid black;
+margin: 50px;
+padding: 15px;}
+
+#form legend{font-size: 45px;
+font-weight: bold;
+padding-bottom: 20px;}
+
+input[type="submit"]{font-size: 25px;
+padding-top: 20px;}
+
+
+gallery{grid-column: 1/-1; 
+grid-row: 4/span 1;
+text-align: center;} 
+
+.contact_footer{grid-column: 1/-1;
+grid-row: 5/auto;}
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      background: white;
+      left: 0;
+      padding: 6px;
+      position: absolute;
+      top: -40px;
+      -webkit-transition: none !important;
+      transition: none !important; 
+      z-index: 1;
+    }
+  
+    .skip a:focus{
+      top:0;
+    }
+  }
+
+/*@media screen and (min-width: 500px) and (max-width: 800px){
+
+
+
+1) change navigation
+2) make text boxes a little staggered on about/work page
+3) gallery photos take up a little room
+
+*/
+
+
+
+/*@media screen and (min-width: 800px){
+    
+    .index_container{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-row-gap: 200px;
+        grid-template-rows: auto auto auto auto;
+        width: 100vw;
+    }
+
+    .images{grid-column: 1/-1;
+        grid-row: 3/span 1;
+        padding-top: 150px; 
+        }
+}
+
+1) change navigation
+2) make text boxes staggered on about/work pages
+3) make home photos 3 in a row
+4) make gallery photos take up more room on the screen/add 3 more photos
+
+*/
+
+
+/* notes: 
+-start media queries / differences (nav will change, info boxes won't be straight down center, images will take up more of a row)
+-put little boxes where to type answers in form
+-fix home page zooming out in mobile/footer
+-start documentation/axe and WAVE tests (by Thursday start this and take into office hours both Thurs/Friday)
+
+Tuesdays early office hours: home page on mobile is zooming out, contact form boxes on mobile, media queries working (reduced motion, try a desktop change)
+Tuesday later: fix home screen/try and finsih media query changes
+Wednesday: finish+get help on media queries if needed/start axe and wave+documentation
+Thursday office hours: ask any questions around media queries/axe and wave
+Friday: finalizing everything 
+*/
+
+
+
+
+
+
+
+
+
+
